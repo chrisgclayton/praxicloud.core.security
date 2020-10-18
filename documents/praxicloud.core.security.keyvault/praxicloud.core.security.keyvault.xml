@@ -1,0 +1,712 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>praxicloud.core.security.keyvault</name>
+    </assembly>
+    <members>
+        <member name="T:praxicloud.core.security.keyvault.KeyVault">
+            <summary>
+            The key vault entry point
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVault.DefaultSuffix">
+            <summary>
+            The default suffix for key vault in the public cloud
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVault.SubdomainSeparator">
+            <summary>
+            The separator between subdomains in the fully qualified name
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVault.DefaultApplicationId">
+            <summary>
+            The default diagnostics application id
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVault.DefaultNetworkTimeout">
+            <summary>
+            The default network timeout
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVault.DefaultDelay">
+            <summary>
+            The default delay between retries
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVault.DefaultMaximumDelay">
+            <summary>
+            The default maximum delay between retries
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVault.DefaultMaximumRetries">
+            <summary>
+            The default maximum retry count
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVault._credential">
+            <summary>
+            The credential used to retrieve a token
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVault.#ctor(System.String,Azure.Core.TokenCredential,System.Nullable{System.Int32},System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan})">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="vaultName">The name of the Key Vault</param>
+            <param name="credential">The Oauth token provider credential</param>
+            <param name="maximumRetries">The maximum number of retries for operations</param>
+            <param name="delay">The delay between retries</param>
+            <param name="maximumDelay">The maximum delay between retries</param>
+            <param name="networkTimeout">The network timeout on operations</param>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVault.Name">
+            <summary>
+            The Key Vault's name
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVault.FullyQualifiedName">
+            <summary>
+            The Key Vault's fully qualified name
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVault.Uri">
+            <summary>
+            The Key Vault's Uri
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVault.MaximumRetries">
+            <summary>
+            Maximum number of retries
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVault.Delay">
+            <summary>
+            Delay between retries
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVault.MaximumDelay">
+            <summary>
+            Maximum delay between retries
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVault.NetworkTimeout">
+            <summary>
+            The network timeout for operations
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVault.EnableDiagnostics">
+            <summary>
+            True to enable diagnostics on all created secrets etc.
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVault.DiagnosticsApplicationId">
+            <summary>
+            The application id for diagnostics
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVault.GetSecretsClient(Azure.Security.KeyVault.Secrets.SecretClientOptions.ServiceVersion)">
+            <summary>
+            Retrieves a new instance of a key vault secret
+            </summary>
+            <param name="version">The version of the client to use</param>
+            <returns>A key vault secret instance</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVault.GetCertificatesClient(Azure.Security.KeyVault.Certificates.CertificateClientOptions.ServiceVersion)">
+            <summary>
+            Retrieves a new instance of a key vault certificate
+            </summary>
+            <param name="version">The version of the client to use</param>
+            <returns>A key vault certificate instance</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVault.GetKeysClient(Azure.Security.KeyVault.Keys.KeyClientOptions.ServiceVersion)">
+            <summary>
+            Retrieves a new instance of a key vault key
+            </summary>
+            <param name="version">The version of the client to use</param>
+            <returns>A key vault key instance</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVault.GetFullyQualifiedKeyVaultName(System.String)">
+            <summary>
+            Cleans the vault name and returns the fully qualified name variant or an empty string if it is not valid
+            </summary>
+            <param name="vaultName">The vault name</param>
+            <returns>The fully qualified vault name</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVault.GetBaseKeyVaultName(System.String)">
+            <summary>
+            Cleans the vault name and returns the non qualified name
+            </summary>
+            <param name="vaultName">The name of the vault</param>
+            <returns>A clean version of the base name</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVault.RemoveOuterSubdomainSeperators(System.String)">
+            <summary>
+            Removes subdomain seperators and trims the domain string to determine the fully qualified name
+            </summary>
+            <param name="domainString">The domain string to be cleaned</param>
+            <returns>The clean string</returns>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.KeyVaultCertificateResponse">
+            <summary>
+            A response from Key Vault for certificate retrieval
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.#ctor(Azure.Security.KeyVault.Certificates.KeyVaultCertificateWithPolicy,System.Int32,System.Int64)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="certificate">The key vault certificate</param>
+            <param name="httpStatus">The http status code returned</param>
+            <param name="elapsedMilliseconds">The number of milliseconds that elapsed executing the query</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.#ctor(Azure.Security.KeyVault.Certificates.KeyVaultCertificate,System.Int32,System.Int64)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="certificate">The key vault certificate</param>
+            <param name="httpStatus">The http status code returned</param>
+            <param name="elapsedMilliseconds">The number of milliseconds that elapsed executing the query</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="name">The name of the secret being retrieved</param>
+            <param name="version">The version of the secret being retrieved</param>
+            <param name="exception">An exception that represents the failure</param>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.Name">
+            <summary>
+            The name of the secret being retrieved
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.Id">
+            <summary>
+            The id of the secret that was retrieved
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.Value">
+            <summary>
+            The contents of the certificate
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.Properties">
+            <summary>
+            Properties of the certificate retreived
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.SecretId">
+            <summary>
+            The id of the secret that back the certificate with the key etc.
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.KeyId">
+            <summary>
+            The id of the key that backs the certificate
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.Policy">
+            <summary>
+            The certificate policy
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.Version">
+            <summary>
+            The version of the secret being requested
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.op_Implicit(praxicloud.core.security.keyvault.KeyVaultCertificateResponse)~System.Byte[]">
+            <summary>
+            Implicit casting of the response to the certificate being the value that was retrieved
+            </summary>
+            <param name="response">The response to cast</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.op_Implicit(praxicloud.core.security.keyvault.KeyVaultCertificateResponse)~Azure.Security.KeyVault.Certificates.CertificatePolicy">
+            <summary>
+            Implicit casting of the response to a certificate policy
+            </summary>
+            <param name="response">The response to cast</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultCertificateResponse.op_Implicit(praxicloud.core.security.keyvault.KeyVaultCertificateResponse)~Azure.Security.KeyVault.Certificates.CertificateProperties">
+            <summary>
+            Implicit casting of the response to certificate properties
+            </summary>
+            <param name="response">The response to cast</param>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.KeyVaultCertificates">
+            <summary>
+            The Key Vault interop instance for certificates
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultCertificates.#ctor(System.Uri,Azure.Core.TokenCredential,Azure.Security.KeyVault.Certificates.CertificateClientOptions)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="keyVault">The key vault URI</param>
+            <param name="credential">Oauth token credentials</param>
+            <param name="options">The options used to access the certificates</param>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultCertificates.Client">
+            <summary>
+            The Key Vault certificate client
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultCertificates.GetOptions(System.Nullable{Azure.Security.KeyVault.Certificates.CertificateClientOptions.ServiceVersion})">
+            <summary>
+            Retrieves the Key Vault certificate options
+            </summary>
+            <param name="version">The version of the key vault API to use</param>
+            <returns>An instance of Key Vault options</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultCertificates.GetAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves the certificate based on the name and version if provided
+            </summary>
+            <param name="name">The name of the certificate to retrieve</param>
+            <param name="version">The certificate version or null to get the latest</param>
+            <param name="cancellationToken">A token to monitor for abort requests</param>
+            <returns>The response from the query</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultCertificates.ConfigureRetries(Azure.Security.KeyVault.Certificates.CertificateClientOptions,Azure.Core.RetryMode,System.Int32,System.TimeSpan,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Configures the retries on an options instance
+            </summary>
+            <param name="options">The options instance</param>
+            <param name="mode">The retry mode</param>
+            <param name="maximumRetries">The maximum retries to be performed</param>
+            <param name="delay">The delay before invoking the first retry</param>
+            <param name="maximumDelay">The maximum delay allowed between retries</param>
+            <param name="networkTimeout">The network timeout for a single operation</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultCertificates.ConfigureDiagnostics(Azure.Security.KeyVault.Certificates.CertificateClientOptions,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Configures the diagnostics information associated with a credential option
+            </summary>
+            <param name="options">The option instance</param>
+            <param name="applicationId">The application id</param>
+            <param name="isDistributedTracingEnabled">True if distributed tracing is in use</param>
+            <param name="isLoggingContentEnabled">True if logging of content is enabled</param>
+            <param name="isLoggingEnabled">True if logging is enabled</param>
+            <param name="isTelemetryEnabled">True if telemetry is enabled</param>
+            <param name="loggingContentSizeLimit">The maximum size of the content being logged</param>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.KeyVaultKeyResponse">
+            <summary>
+            A response from Key Vault for secret retrieval
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultKeyResponse.#ctor(Azure.Security.KeyVault.Keys.KeyVaultKey,System.Int32,System.Int64)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="key">The key vault key</param>
+            <param name="httpStatus">The http status code returned</param>
+            <param name="elapsedMilliseconds">The number of milliseconds that elapsed executing the query</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultKeyResponse.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="name">The name of the secret being retrieved</param>
+            <param name="version">The version of the secret being retrieved</param>
+            <param name="exception">An exception that represents the failure</param>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultKeyResponse.Name">
+            <summary>
+            The name of the secret being retrieved
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultKeyResponse.Id">
+            <summary>
+            The id of the secret that was retrieved
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultKeyResponse.Version">
+            <summary>
+            The version of the secret being requested
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultKeyResponse.Value">
+            <summary>
+            The key that was retrieved
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVaultKeyResponse.Operations">
+            <summary>
+            The operations that can be performed on the key
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultKeyResponse.KeyType">
+            <summary>
+            The type of the key
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultKeyResponse.Properties">
+            <summary>
+            The properties of the key
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultKeyResponse.op_Implicit(praxicloud.core.security.keyvault.KeyVaultKeyResponse)~Azure.Security.KeyVault.Keys.JsonWebKey">
+            <summary>
+            Implicit casting of the response to a JsonWebKey being the value that was retrieved
+            </summary>
+            <param name="response">The response to cast</param>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.KeyVaultKeys">
+            <summary>
+            The Key Vault interop instance for certificates
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultKeys.#ctor(System.Uri,Azure.Core.TokenCredential,Azure.Security.KeyVault.Keys.KeyClientOptions)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="keyVault">The key vault URI</param>
+            <param name="credential">Oauth token credentials</param>
+            <param name="options">The options used to access the keys</param>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultKeys.Client">
+            <summary>
+            The Key Vault key client
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultKeys.GetOptions(System.Nullable{Azure.Security.KeyVault.Keys.KeyClientOptions.ServiceVersion})">
+            <summary>
+            Retrieves the Key Vault key options
+            </summary>
+            <param name="version">The version of the key vault API to use</param>
+            <returns>An instance of Key Vault options</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultKeys.GetAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves the key based on the name and version if provided
+            </summary>
+            <param name="name">The name of the key to retrieve</param>
+            <param name="version">The key version or null to get the latest</param>
+            <param name="cancellationToken">A token to monitor for abort requests</param>
+            <returns>The response from the query</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultKeys.ConfigureRetries(Azure.Security.KeyVault.Keys.KeyClientOptions,Azure.Core.RetryMode,System.Int32,System.TimeSpan,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Configures the retries on an options instance
+            </summary>
+            <param name="options">The options instance</param>
+            <param name="mode">The retry mode</param>
+            <param name="maximumRetries">The maximum retries to be performed</param>
+            <param name="delay">The delay before invoking the first retry</param>
+            <param name="maximumDelay">The maximum delay allowed between retries</param>
+            <param name="networkTimeout">The network timeout for a single operation</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultKeys.ConfigureDiagnostics(Azure.Security.KeyVault.Keys.KeyClientOptions,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Configures the diagnostics information associated with a key option
+            </summary>
+            <param name="options">The option instance</param>
+            <param name="applicationId">The application id</param>
+            <param name="isDistributedTracingEnabled">True if distributed tracing is in use</param>
+            <param name="isLoggingContentEnabled">True if logging of content is enabled</param>
+            <param name="isLoggingEnabled">True if logging is enabled</param>
+            <param name="isTelemetryEnabled">True if telemetry is enabled</param>
+            <param name="loggingContentSizeLimit">The maximum size of the content being logged</param>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.KeyVaultResponse">
+            <summary>
+            A response from Key Vault operation
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultResponse.#ctor(System.Int32,System.Int64)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="secret">The key vault secret</param>
+            <param name="httpStatus">The http status code returned</param>
+            <param name="elapsedMilliseconds">The number of milliseconds that elapsed executing the query</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultResponse.#ctor(System.Exception)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="exception">An exception that represents the failure</param>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultResponse.HttpStatus">
+            <summary>
+            The Http status code that was returned or 0 if an exception was raised
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultResponse.IsSuccess">
+            <summary>
+            True if the Http request was successful
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultResponse.Exception">
+            <summary>
+            The exception that was returned
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultResponse.ElapsedMilliseconds">
+            <summary>
+            The number of milliseconds that elapsed executing the query or 0 if an exception was raised
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultResponse.op_Implicit(praxicloud.core.security.keyvault.KeyVaultResponse)~System.Boolean">
+            <summary>
+            Implicit casting of the response to a boolean indicating the success of the response
+            </summary>
+            <param name="response">The response to cast</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultResponse.op_Implicit(praxicloud.core.security.keyvault.KeyVaultResponse)~System.Int32">
+            <summary>
+            Implicit casting of the response to a integer indicating the Http status code
+            </summary>
+            <param name="response">The response to cast</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultResponse.op_Implicit(praxicloud.core.security.keyvault.KeyVaultResponse)~System.Exception">
+            <summary>
+            Implicit casting of the response to an Exception indicating the exception that was raised
+            </summary>
+            <param name="response">The response to cast</param>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse">
+            <summary>
+            A response from Key Vault for secret retrieval
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse.#ctor(Azure.Security.KeyVault.Secrets.KeyVaultSecret,System.Int32,System.Int64)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="secret">The key vault secret</param>
+            <param name="httpStatus">The http status code returned</param>
+            <param name="elapsedMilliseconds">The number of milliseconds that elapsed executing the query</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="name">The name of the secret being retrieved</param>
+            <param name="version">The version of the secret being retrieved</param>
+            <param name="exception">An exception that represents the failure</param>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse.Name">
+            <summary>
+            The name of the secret being retrieved
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse.Id">
+            <summary>
+            The id of the secret that was retrieved
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse.Value">
+            <summary>
+            The value of the secret
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse.ContentType">
+            <summary>
+            The content type of the secret retrieved
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse.Enabled">
+            <summary>
+            True if enabled and set
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse.ExpiresOn">
+            <summary>
+            The expiration date if set
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse.Version">
+            <summary>
+            The version of the secret being requested
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse.op_Implicit(praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse)~System.Security.Cryptography.X509Certificates.X509Certificate2">
+            <summary>
+            Implicit casting of the response to a certificate being the value that was retrieved
+            </summary>
+            <param name="response">The response to cast</param>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.KeyVaultSecretManager">
+            <summary>
+            A secret manager implementation that is backed by a key vault store
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVaultSecretManager._keyVault">
+            <summary>
+            The Key Vault instance used to retrieve the secret, certificate and key client
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVaultSecretManager._secrets">
+            <summary>
+            Key vault secrets client 
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVaultSecretManager._certificates">
+            <summary>
+            Key vault certificates client 
+            </summary>
+        </member>
+        <member name="F:praxicloud.core.security.keyvault.KeyVaultSecretManager._control">
+            <summary>
+            An asynchronous lock that can be used to control access to client creation
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecretManager.#ctor(System.String,Azure.Core.TokenCredential,System.Nullable{System.Int32},System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan})">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="vaultName">The name of the Key Vault</param>
+            <param name="credential">The Oauth token provider credential</param>
+            <param name="maximumRetries">The maximum number of retries for operations</param>
+            <param name="delay">The delay between retries</param>
+            <param name="maximumDelay">The maximum delay between retries</param>
+            <param name="networkTimeout">The network timeout on operations</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecretManager.GetCertificateAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecretManager.GetSecretAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecretManager.GetSecretAsync``1(System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.KeyVaultSecretResponse">
+            <summary>
+            A response from Key Vault for secret retrieval
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecretResponse.#ctor(Azure.Security.KeyVault.Secrets.KeyVaultSecret,System.Int32,System.Int64)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="secret">The key vault secret</param>
+            <param name="httpStatus">The http status code returned</param>
+            <param name="elapsedMilliseconds">The number of milliseconds that elapsed executing the query</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecretResponse.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="name">The name of the secret being retrieved</param>
+            <param name="version">The version of the secret being retrieved</param>
+            <param name="exception">An exception that represents the failure</param>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretResponse.Name">
+            <summary>
+            The name of the secret being retrieved
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretResponse.Id">
+            <summary>
+            The id of the secret that was retrieved
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretResponse.Value">
+            <summary>
+            The value of the secret
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretResponse.ContentType">
+            <summary>
+            The content type of the secret retrieved
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretResponse.Enabled">
+            <summary>
+            True if enabled and set
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretResponse.ExpiresOn">
+            <summary>
+            The expiration date if set
+            </summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecretResponse.Version">
+            <summary>
+            The version of the secret being requested
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecretResponse.op_Implicit(praxicloud.core.security.keyvault.KeyVaultSecretResponse)~System.Security.SecureString">
+            <summary>
+            Implicit casting of the response to a SecureString being the value that was retrieved
+            </summary>
+            <param name="response">The response to cast</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecretResponse.op_Implicit(praxicloud.core.security.keyvault.KeyVaultSecretResponse)~System.String">
+            <summary>
+            Implicit casting of the response to a string being the value that was retrieved as a CLR string
+            </summary>
+            <param name="response">The response to cast</param>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.KeyVaultSecrets">
+            <summary>
+            The Key Vault interop instance for secrets
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecrets.#ctor(System.Uri,Azure.Core.TokenCredential,Azure.Security.KeyVault.Secrets.SecretClientOptions)">
+            <summary>
+            Initializes a new instance of the type
+            </summary>
+            <param name="keyVault">The key vault URI</param>
+            <param name="credential">Oauth token credentials</param>
+            <param name="options">The options used to access the secrets</param>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.KeyVaultSecrets.Client">
+            <summary>
+            The Key Vault secret client
+            </summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecrets.GetOptions(System.Nullable{Azure.Security.KeyVault.Secrets.SecretClientOptions.ServiceVersion})">
+            <summary>
+            Retrieves the Key Vault secret options
+            </summary>
+            <param name="version">The version of the key vault API to use</param>
+            <returns>An instance of Key Vault options</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecrets.GetAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves the secret based on the name and version if provided
+            </summary>
+            <param name="name">The name of the secret to retrieve</param>
+            <param name="version">The secret version or null to get the latest</param>
+            <param name="cancellationToken">A token to monitor for abort requests</param>
+            <returns>The response from the query</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecrets.GetCertificateAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves the certificate stored as a secret based on the name and version if provided
+            </summary>
+            <param name="name">The name of the secret to retrieve</param>
+            <param name="version">The secret version or null to get the latest</param>
+            <param name="cancellationToken">A token to monitor for abort requests</param>
+            <returns>The response from the query</returns>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecrets.ConfigureRetries(Azure.Security.KeyVault.Secrets.SecretClientOptions,Azure.Core.RetryMode,System.Int32,System.TimeSpan,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Configures the retries on an options instance
+            </summary>
+            <param name="options">The options instance</param>
+            <param name="mode">The retry mode</param>
+            <param name="maximumRetries">The maximum retries to be performed</param>
+            <param name="delay">The delay before invoking the first retry</param>
+            <param name="maximumDelay">The maximum delay allowed between retries</param>
+            <param name="networkTimeout">The network timeout for a single operation</param>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.KeyVaultSecrets.ConfigureDiagnostics(Azure.Security.KeyVault.Secrets.SecretClientOptions,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Configures the diagnostics information associated with a credential option
+            </summary>
+            <param name="options">The option instance</param>
+            <param name="applicationId">The application id</param>
+            <param name="isDistributedTracingEnabled">True if distributed tracing is in use</param>
+            <param name="isLoggingContentEnabled">True if logging of content is enabled</param>
+            <param name="isLoggingEnabled">True if logging is enabled</param>
+            <param name="isTelemetryEnabled">True if telemetry is enabled</param>
+            <param name="loggingContentSizeLimit">The maximum size of the content being logged</param>
+        </member>
+    </members>
+</doc>
