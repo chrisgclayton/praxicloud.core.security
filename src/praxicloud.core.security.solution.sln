@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "praxicloud.core.security.keyvault", "praxicloud.core.security.keyvault\praxicloud.core.security.keyvault.csproj", "{1C02C71E-27A4-4C1A-9332-AB912021DF55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "praxicloud.core.security.keyvault.tests", "praxicloud.core.security.keyvault.tests\praxicloud.core.security.keyvault.tests.csproj", "{38A4A543-E55C-4C05-B32A-F5A91FF90390}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{1C02C71E-27A4-4C1A-9332-AB912021DF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C02C71E-27A4-4C1A-9332-AB912021DF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C02C71E-27A4-4C1A-9332-AB912021DF55}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38A4A543-E55C-4C05-B32A-F5A91FF90390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38A4A543-E55C-4C05-B32A-F5A91FF90390}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38A4A543-E55C-4C05-B32A-F5A91FF90390}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38A4A543-E55C-4C05-B32A-F5A91FF90390}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
