@@ -1,0 +1,674 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>praxicloud.core.security.keyvault.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVault">
+            <summary>Shim type of praxicloud.core.security.keyvault.KeyVault</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.#ctor(praxicloud.core.security.keyvault.KeyVault)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.DelayGet">
+            <summary>Sets the shim of KeyVault.get_Delay(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.DiagnosticsApplicationIdGet">
+            <summary>Sets the shim of KeyVault.get_DiagnosticsApplicationId(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.DiagnosticsApplicationIdSetString">
+            <summary>Sets the shim of KeyVault.set_DiagnosticsApplicationId(KeyVault this, String value)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.EnableDiagnosticsGet">
+            <summary>Sets the shim of KeyVault.get_EnableDiagnostics(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.EnableDiagnosticsSetBoolean">
+            <summary>Sets the shim of KeyVault.set_EnableDiagnostics(KeyVault this, Boolean value)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.FullyQualifiedNameGet">
+            <summary>Sets the shim of KeyVault.get_FullyQualifiedName(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.GetCertificatesClientCertificateClientOptionsServiceVersion">
+            <summary>Sets the shim of KeyVault.GetCertificatesClient(KeyVault this, ServiceVersion version)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.GetKeysClientKeyClientOptionsServiceVersion">
+            <summary>Sets the shim of KeyVault.GetKeysClient(KeyVault this, ServiceVersion version)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.GetSecretsClientSecretClientOptionsServiceVersion">
+            <summary>Sets the shim of KeyVault.GetSecretsClient(KeyVault this, ServiceVersion version)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.MaximumDelayGet">
+            <summary>Sets the shim of KeyVault.get_MaximumDelay(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.MaximumRetriesGet">
+            <summary>Sets the shim of KeyVault.get_MaximumRetries(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.NameGet">
+            <summary>Sets the shim of KeyVault.get_Name(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.NetworkTimeoutGet">
+            <summary>Sets the shim of KeyVault.get_NetworkTimeout(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.AllInstances.UriGet">
+            <summary>Sets the shim of KeyVault.get_Uri(KeyVault this)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.ConstructorStringTokenCredentialNullableOfInt32NullableOfTimeSpanNullableOfTimeSpanNullableOfTimeSpan">
+            <summary>Sets the shim of KeyVault.KeyVault(KeyVault this, String vaultName, TokenCredential credential, Nullable`1 maximumRetries, Nullable`1 delay, Nullable`1 maximumDelay, Nullable`1 networkTimeout)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.DelayGet">
+            <summary>Sets the shim of KeyVault.get_Delay(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.DiagnosticsApplicationIdGet">
+            <summary>Sets the shim of KeyVault.get_DiagnosticsApplicationId(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.DiagnosticsApplicationIdSetString">
+            <summary>Sets the shim of KeyVault.set_DiagnosticsApplicationId(KeyVault this, String value)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.EnableDiagnosticsGet">
+            <summary>Sets the shim of KeyVault.get_EnableDiagnostics(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.EnableDiagnosticsSetBoolean">
+            <summary>Sets the shim of KeyVault.set_EnableDiagnostics(KeyVault this, Boolean value)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.FullyQualifiedNameGet">
+            <summary>Sets the shim of KeyVault.get_FullyQualifiedName(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.GetBaseKeyVaultNameString">
+            <summary>Sets the shim of KeyVault.GetBaseKeyVaultName(String vaultName)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.GetCertificatesClientCertificateClientOptionsServiceVersion">
+            <summary>Sets the shim of KeyVault.GetCertificatesClient(KeyVault this, ServiceVersion version)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.GetFullyQualifiedKeyVaultNameString">
+            <summary>Sets the shim of KeyVault.GetFullyQualifiedKeyVaultName(String vaultName)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.GetKeysClientKeyClientOptionsServiceVersion">
+            <summary>Sets the shim of KeyVault.GetKeysClient(KeyVault this, ServiceVersion version)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.GetSecretsClientSecretClientOptionsServiceVersion">
+            <summary>Sets the shim of KeyVault.GetSecretsClient(KeyVault this, ServiceVersion version)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.MaximumDelayGet">
+            <summary>Sets the shim of KeyVault.get_MaximumDelay(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.MaximumRetriesGet">
+            <summary>Sets the shim of KeyVault.get_MaximumRetries(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.NameGet">
+            <summary>Sets the shim of KeyVault.get_Name(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.NetworkTimeoutGet">
+            <summary>Sets the shim of KeyVault.get_NetworkTimeout(KeyVault this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.RemoveOuterSubdomainSeperatorsString">
+            <summary>Sets the shim of KeyVault.RemoveOuterSubdomainSeperators(String domainString)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.StaticConstructor">
+            <summary>Sets the shim of KeyVault.KeyVault()</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVault.UriGet">
+            <summary>Sets the shim of KeyVault.get_Uri(KeyVault this)</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse">
+            <summary>Shim type of praxicloud.core.security.keyvault.KeyVaultCertificateResponse</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.#ctor(praxicloud.core.security.keyvault.KeyVaultCertificateResponse)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.AllInstances.IdGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Id(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.AllInstances.KeyIdGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_KeyId(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.AllInstances.NameGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Name(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.AllInstances.PolicyGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Policy(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.AllInstances.PropertiesGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Properties(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.AllInstances.SecretIdGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_SecretId(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.AllInstances.ValueGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Value(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.AllInstances.VersionGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Version(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.ConstructorKeyVaultCertificateInt32Int64">
+            <summary>Sets the shim of KeyVaultCertificateResponse.KeyVaultCertificateResponse(KeyVaultCertificateResponse this, KeyVaultCertificate certificate, Int32 httpStatus, Int64 elapsedMilliseconds)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.ConstructorKeyVaultCertificateWithPolicyInt32Int64">
+            <summary>Sets the shim of KeyVaultCertificateResponse.KeyVaultCertificateResponse(KeyVaultCertificateResponse this, KeyVaultCertificateWithPolicy certificate, Int32 httpStatus, Int64 elapsedMilliseconds)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.ConstructorStringStringException">
+            <summary>Sets the shim of KeyVaultCertificateResponse.KeyVaultCertificateResponse(KeyVaultCertificateResponse this, String name, String version, Exception exception)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.IdGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Id(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.ImplicitOpKeyVaultCertificateResponseByteArray">
+            <summary>Sets the shim of KeyVaultCertificateResponse.op_Implicit(KeyVaultCertificateResponse response)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.ImplicitOpKeyVaultCertificateResponseCertificatePolicy">
+            <summary>Sets the shim of KeyVaultCertificateResponse.op_Implicit(KeyVaultCertificateResponse response)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.ImplicitOpKeyVaultCertificateResponseCertificateProperties">
+            <summary>Sets the shim of KeyVaultCertificateResponse.op_Implicit(KeyVaultCertificateResponse response)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.KeyIdGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_KeyId(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.NameGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Name(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.PolicyGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Policy(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.PropertiesGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Properties(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.SecretIdGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_SecretId(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.ValueGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Value(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificateResponse.VersionGet">
+            <summary>Sets the shim of KeyVaultCertificateResponse.get_Version(KeyVaultCertificateResponse this)</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates">
+            <summary>Shim type of praxicloud.core.security.keyvault.KeyVaultCertificates</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.#ctor(praxicloud.core.security.keyvault.KeyVaultCertificates)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.AllInstances.ClientGet">
+            <summary>Sets the shim of KeyVaultCertificates.get_Client(KeyVaultCertificates this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.AllInstances.GetAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultCertificates.GetAsync(KeyVaultCertificates this, String name, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.ClientGet">
+            <summary>Sets the shim of KeyVaultCertificates.get_Client(KeyVaultCertificates this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.ConfigureDiagnosticsCertificateClientOptionsStringBooleanBooleanBooleanBooleanInt32">
+            <summary>Sets the shim of KeyVaultCertificates.ConfigureDiagnostics(CertificateClientOptions options, String applicationId, Boolean isDistributedTracingEnabled, Boolean isLoggingContentEnabled, Boolean isLoggingEnabled, Boolean isTelemetryEnabled, Int32 loggingContentSizeLimit)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.ConfigureRetriesCertificateClientOptionsRetryModeInt32TimeSpanTimeSpanTimeSpan">
+            <summary>Sets the shim of KeyVaultCertificates.ConfigureRetries(CertificateClientOptions options, RetryMode mode, Int32 maximumRetries, TimeSpan delay, TimeSpan maximumDelay, TimeSpan networkTimeout)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.ConstructorUriTokenCredentialCertificateClientOptions">
+            <summary>Sets the shim of KeyVaultCertificates.KeyVaultCertificates(KeyVaultCertificates this, Uri keyVault, TokenCredential credential, CertificateClientOptions options)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.GetAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultCertificates.GetAsync(KeyVaultCertificates this, String name, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultCertificates.GetOptionsNullableOfCertificateClientOptionsServiceVersion">
+            <summary>Sets the shim of KeyVaultCertificates.GetOptions(Nullable`1 version)</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse">
+            <summary>Shim type of praxicloud.core.security.keyvault.KeyVaultKeyResponse</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.#ctor(praxicloud.core.security.keyvault.KeyVaultKeyResponse)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.AllInstances.IdGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_Id(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.AllInstances.KeyTypeGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_KeyType(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.AllInstances.NameGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_Name(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.AllInstances.PropertiesGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_Properties(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.AllInstances.ValueGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_Value(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.AllInstances.VersionGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_Version(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.ConstructorKeyVaultKeyInt32Int64">
+            <summary>Sets the shim of KeyVaultKeyResponse.KeyVaultKeyResponse(KeyVaultKeyResponse this, KeyVaultKey key, Int32 httpStatus, Int64 elapsedMilliseconds)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.ConstructorStringStringException">
+            <summary>Sets the shim of KeyVaultKeyResponse.KeyVaultKeyResponse(KeyVaultKeyResponse this, String name, String version, Exception exception)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.IdGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_Id(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.ImplicitOpKeyVaultKeyResponseJsonWebKey">
+            <summary>Sets the shim of KeyVaultKeyResponse.op_Implicit(KeyVaultKeyResponse response)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.KeyTypeGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_KeyType(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.NameGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_Name(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.PropertiesGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_Properties(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.ValueGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_Value(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeyResponse.VersionGet">
+            <summary>Sets the shim of KeyVaultKeyResponse.get_Version(KeyVaultKeyResponse this)</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys">
+            <summary>Shim type of praxicloud.core.security.keyvault.KeyVaultKeys</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.#ctor(praxicloud.core.security.keyvault.KeyVaultKeys)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.AllInstances.ClientGet">
+            <summary>Sets the shim of KeyVaultKeys.get_Client(KeyVaultKeys this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.AllInstances.GetAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultKeys.GetAsync(KeyVaultKeys this, String name, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.ClientGet">
+            <summary>Sets the shim of KeyVaultKeys.get_Client(KeyVaultKeys this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.ConfigureDiagnosticsKeyClientOptionsStringBooleanBooleanBooleanBooleanInt32">
+            <summary>Sets the shim of KeyVaultKeys.ConfigureDiagnostics(KeyClientOptions options, String applicationId, Boolean isDistributedTracingEnabled, Boolean isLoggingContentEnabled, Boolean isLoggingEnabled, Boolean isTelemetryEnabled, Int32 loggingContentSizeLimit)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.ConfigureRetriesKeyClientOptionsRetryModeInt32TimeSpanTimeSpanTimeSpan">
+            <summary>Sets the shim of KeyVaultKeys.ConfigureRetries(KeyClientOptions options, RetryMode mode, Int32 maximumRetries, TimeSpan delay, TimeSpan maximumDelay, TimeSpan networkTimeout)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.ConstructorUriTokenCredentialKeyClientOptions">
+            <summary>Sets the shim of KeyVaultKeys.KeyVaultKeys(KeyVaultKeys this, Uri keyVault, TokenCredential credential, KeyClientOptions options)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.GetAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultKeys.GetAsync(KeyVaultKeys this, String name, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultKeys.GetOptionsNullableOfKeyClientOptionsServiceVersion">
+            <summary>Sets the shim of KeyVaultKeys.GetOptions(Nullable`1 version)</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse">
+            <summary>Shim type of praxicloud.core.security.keyvault.KeyVaultResponse</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.#ctor(praxicloud.core.security.keyvault.KeyVaultResponse)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.AllInstances.ElapsedMillisecondsGet">
+            <summary>Sets the shim of KeyVaultResponse.get_ElapsedMilliseconds(KeyVaultResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.AllInstances.ExceptionGet">
+            <summary>Sets the shim of KeyVaultResponse.get_Exception(KeyVaultResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.AllInstances.HttpStatusGet">
+            <summary>Sets the shim of KeyVaultResponse.get_HttpStatus(KeyVaultResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.AllInstances.IsSuccessGet">
+            <summary>Sets the shim of KeyVaultResponse.get_IsSuccess(KeyVaultResponse this)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.ConstructorException">
+            <summary>Sets the shim of KeyVaultResponse.KeyVaultResponse(KeyVaultResponse this, Exception exception)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.ConstructorInt32Int64">
+            <summary>Sets the shim of KeyVaultResponse.KeyVaultResponse(KeyVaultResponse this, Int32 httpStatus, Int64 elapsedMilliseconds)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.ElapsedMillisecondsGet">
+            <summary>Sets the shim of KeyVaultResponse.get_ElapsedMilliseconds(KeyVaultResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.ExceptionGet">
+            <summary>Sets the shim of KeyVaultResponse.get_Exception(KeyVaultResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.HttpStatusGet">
+            <summary>Sets the shim of KeyVaultResponse.get_HttpStatus(KeyVaultResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.ImplicitOpKeyVaultResponseBoolean">
+            <summary>Sets the shim of KeyVaultResponse.op_Implicit(KeyVaultResponse response)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.ImplicitOpKeyVaultResponseException">
+            <summary>Sets the shim of KeyVaultResponse.op_Implicit(KeyVaultResponse response)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.ImplicitOpKeyVaultResponseInt32">
+            <summary>Sets the shim of KeyVaultResponse.op_Implicit(KeyVaultResponse response)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultResponse.IsSuccessGet">
+            <summary>Sets the shim of KeyVaultResponse.get_IsSuccess(KeyVaultResponse this)</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse">
+            <summary>Shim type of praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.#ctor(praxicloud.core.security.keyvault.KeyVaultSecretCertificateResponse)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.AllInstances.ContentTypeGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_ContentType(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.AllInstances.EnabledGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_Enabled(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.AllInstances.ExpiresOnGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_ExpiresOn(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.AllInstances.IdGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_Id(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.AllInstances.NameGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_Name(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.AllInstances.ValueGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_Value(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.AllInstances.VersionGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_Version(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.ConstructorKeyVaultSecretInt32Int64">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.KeyVaultSecretCertificateResponse(KeyVaultSecretCertificateResponse this, KeyVaultSecret secret, Int32 httpStatus, Int64 elapsedMilliseconds)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.ConstructorStringStringException">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.KeyVaultSecretCertificateResponse(KeyVaultSecretCertificateResponse this, String name, String version, Exception exception)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.ContentTypeGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_ContentType(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.EnabledGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_Enabled(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.ExpiresOnGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_ExpiresOn(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.IdGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_Id(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.ImplicitOpKeyVaultSecretCertificateResponseX509Certificate2">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.op_Implicit(KeyVaultSecretCertificateResponse response)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.NameGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_Name(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.ValueGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_Value(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretCertificateResponse.VersionGet">
+            <summary>Sets the shim of KeyVaultSecretCertificateResponse.get_Version(KeyVaultSecretCertificateResponse this)</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager">
+            <summary>Shim type of praxicloud.core.security.keyvault.KeyVaultSecretManager</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.#ctor(praxicloud.core.security.keyvault.KeyVaultSecretManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.AllInstances.GetCertificateAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultSecretManager.GetCertificateAsync(KeyVaultSecretManager this, String certificateName, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.AllInstances.GetSecretAsyncOf1StringStringCancellationToken``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{praxicloud.core.security.keyvault.KeyVaultSecretManager,System.String,System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task{praxicloud.core.security.SecretStoreResponse{``0}}})">
+            <summary>Sets the shim of KeyVaultSecretManager.GetSecretAsync(KeyVaultSecretManager this, String secretName, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.AllInstances.GetSecretAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultSecretManager.GetSecretAsync(KeyVaultSecretManager this, String secretName, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.Bind(praxicloud.core.security.ISecretManager)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.ConstructorStringTokenCredentialNullableOfInt32NullableOfTimeSpanNullableOfTimeSpanNullableOfTimeSpan">
+            <summary>Sets the shim of KeyVaultSecretManager.KeyVaultSecretManager(KeyVaultSecretManager this, String vaultName, TokenCredential credential, Nullable`1 maximumRetries, Nullable`1 delay, Nullable`1 maximumDelay, Nullable`1 networkTimeout)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.GetCertificateAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultSecretManager.GetCertificateAsync(KeyVaultSecretManager this, String certificateName, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.GetSecretAsyncOf1StringStringCancellationToken``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.String,System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task{praxicloud.core.security.SecretStoreResponse{``0}}})">
+            <summary>Sets the shim of KeyVaultSecretManager.GetSecretAsync(KeyVaultSecretManager this, String secretName, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretManager.GetSecretAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultSecretManager.GetSecretAsync(KeyVaultSecretManager this, String secretName, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse">
+            <summary>Shim type of praxicloud.core.security.keyvault.KeyVaultSecretResponse</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.#ctor(praxicloud.core.security.keyvault.KeyVaultSecretResponse)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.AllInstances.ContentTypeGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_ContentType(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.AllInstances.EnabledGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_Enabled(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.AllInstances.ExpiresOnGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_ExpiresOn(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.AllInstances.IdGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_Id(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.AllInstances.NameGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_Name(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.AllInstances.ValueGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_Value(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.AllInstances.VersionGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_Version(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.ConstructorKeyVaultSecretInt32Int64">
+            <summary>Sets the shim of KeyVaultSecretResponse.KeyVaultSecretResponse(KeyVaultSecretResponse this, KeyVaultSecret secret, Int32 httpStatus, Int64 elapsedMilliseconds)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.ConstructorStringStringException">
+            <summary>Sets the shim of KeyVaultSecretResponse.KeyVaultSecretResponse(KeyVaultSecretResponse this, String name, String version, Exception exception)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.ContentTypeGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_ContentType(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.EnabledGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_Enabled(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.ExpiresOnGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_ExpiresOn(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.IdGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_Id(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.ImplicitOpKeyVaultSecretResponseSecureString">
+            <summary>Sets the shim of KeyVaultSecretResponse.op_Implicit(KeyVaultSecretResponse response)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.ImplicitOpKeyVaultSecretResponseString">
+            <summary>Sets the shim of KeyVaultSecretResponse.op_Implicit(KeyVaultSecretResponse response)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.NameGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_Name(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.ValueGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_Value(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecretResponse.VersionGet">
+            <summary>Sets the shim of KeyVaultSecretResponse.get_Version(KeyVaultSecretResponse this)</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets">
+            <summary>Shim type of praxicloud.core.security.keyvault.KeyVaultSecrets</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.#ctor(praxicloud.core.security.keyvault.KeyVaultSecrets)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.AllInstances.ClientGet">
+            <summary>Sets the shim of KeyVaultSecrets.get_Client(KeyVaultSecrets this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.AllInstances.GetAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultSecrets.GetAsync(KeyVaultSecrets this, String name, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.AllInstances.GetCertificateAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultSecrets.GetCertificateAsync(KeyVaultSecrets this, String name, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.ClientGet">
+            <summary>Sets the shim of KeyVaultSecrets.get_Client(KeyVaultSecrets this)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.ConfigureDiagnosticsSecretClientOptionsStringBooleanBooleanBooleanBooleanInt32">
+            <summary>Sets the shim of KeyVaultSecrets.ConfigureDiagnostics(SecretClientOptions options, String applicationId, Boolean isDistributedTracingEnabled, Boolean isLoggingContentEnabled, Boolean isLoggingEnabled, Boolean isTelemetryEnabled, Int32 loggingContentSizeLimit)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.ConfigureRetriesSecretClientOptionsRetryModeInt32TimeSpanTimeSpanTimeSpan">
+            <summary>Sets the shim of KeyVaultSecrets.ConfigureRetries(SecretClientOptions options, RetryMode mode, Int32 maximumRetries, TimeSpan delay, TimeSpan maximumDelay, TimeSpan networkTimeout)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.ConstructorUriTokenCredentialSecretClientOptions">
+            <summary>Sets the shim of KeyVaultSecrets.KeyVaultSecrets(KeyVaultSecrets this, Uri keyVault, TokenCredential credential, SecretClientOptions options)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.GetAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultSecrets.GetAsync(KeyVaultSecrets this, String name, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.GetCertificateAsyncStringStringCancellationToken">
+            <summary>Sets the shim of KeyVaultSecrets.GetCertificateAsync(KeyVaultSecrets this, String name, String version, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="P:praxicloud.core.security.keyvault.Fakes.ShimKeyVaultSecrets.GetOptionsNullableOfSecretClientOptionsServiceVersion">
+            <summary>Sets the shim of KeyVaultSecrets.GetOptions(Nullable`1 version)</summary>
+        </member>
+    </members>
+</doc>
