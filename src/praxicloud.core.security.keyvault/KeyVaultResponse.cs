@@ -16,7 +16,6 @@ namespace praxicloud.core.security.keyvault
         /// <summary>
         /// Initializes a new instance of the type
         /// </summary>
-        /// <param name="secret">The key vault secret</param>
         /// <param name="httpStatus">The http status code returned</param>
         /// <param name="elapsedMilliseconds">The number of milliseconds that elapsed executing the query</param>
         internal KeyVaultResponse(int httpStatus, long elapsedMilliseconds)
