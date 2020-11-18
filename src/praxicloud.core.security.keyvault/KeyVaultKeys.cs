@@ -70,10 +70,8 @@ namespace praxicloud.core.security.keyvault
                 var queryResponse = await Client.GetKeyAsync(name, version, cancellationToken).ConfigureAwait(false);
                 watch.Stop();
 
-                using (var raw = queryResponse.GetRawResponse())
-                {
-                    response = new KeyVaultKeyResponse(queryResponse.Value, raw.Status, watch.ElapsedMilliseconds);
-                }
+                using var raw = queryResponse.GetRawResponse();
+                response = new KeyVaultKeyResponse(queryResponse.Value, raw.Status, watch.ElapsedMilliseconds);
             }
             catch (Exception e)
             {

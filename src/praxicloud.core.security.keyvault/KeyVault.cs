@@ -200,7 +200,7 @@ namespace praxicloud.core.security.keyvault
 
             var cleanName = RemoveOuterSubdomainSeperators(vaultName);
             
-            return string.IsNullOrWhiteSpace(cleanName) || cleanName.IndexOf(".") >= 0 ? cleanName : $"{ cleanName }.{ DefaultSuffix }";
+            return string.IsNullOrWhiteSpace(cleanName) || cleanName.Contains(".", StringComparison.CurrentCulture) ? cleanName : $"{ cleanName }.{ DefaultSuffix }";
         }
 
         /// <summary>
@@ -229,12 +229,12 @@ namespace praxicloud.core.security.keyvault
 
             while (domainStringSpan.StartsWith(SubdomainSeparator) && domainStringSpan.Length > 0)
             {
-                domainStringSpan = domainStringSpan.Slice(1, domainStringSpan.Length - 1);
+                domainStringSpan = domainStringSpan[1..];
             }
 
             while (domainStringSpan.EndsWith(SubdomainSeparator) && domainStringSpan.Length > 0)
             {
-                domainStringSpan = domainStringSpan.Slice(0, domainStringSpan.Length - 1);
+                domainStringSpan = domainStringSpan[0..^1];
             }
 
             var value = domainStringSpan.ToString();

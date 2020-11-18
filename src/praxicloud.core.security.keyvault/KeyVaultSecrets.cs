@@ -71,10 +71,8 @@ namespace praxicloud.core.security.keyvault
                 var queryResponse = await Client.GetSecretAsync(name, version, cancellationToken).ConfigureAwait(false);
                 watch.Stop();
 
-                using (var raw = queryResponse.GetRawResponse())
-                {
-                    response = new KeyVaultSecretResponse(queryResponse.Value, raw.Status, watch.ElapsedMilliseconds);
-                }
+                using var raw = queryResponse.GetRawResponse();
+                response = new KeyVaultSecretResponse(queryResponse.Value, raw.Status, watch.ElapsedMilliseconds);
             }
             catch(Exception e)
             {
@@ -103,10 +101,8 @@ namespace praxicloud.core.security.keyvault
                 var queryResponse = await Client.GetSecretAsync(name, version, cancellationToken).ConfigureAwait(false);
                 watch.Stop();
 
-                using (var raw = queryResponse.GetRawResponse())
-                {
-                    response = new KeyVaultSecretCertificateResponse(queryResponse.Value, raw.Status, watch.ElapsedMilliseconds);
-                }
+                using var raw = queryResponse.GetRawResponse();
+                response = new KeyVaultSecretCertificateResponse(queryResponse.Value, raw.Status, watch.ElapsedMilliseconds);
             }
             catch (Exception e)
             {

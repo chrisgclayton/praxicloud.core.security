@@ -71,20 +71,16 @@ namespace praxicloud.core.security.keyvault
                 if (string.IsNullOrWhiteSpace(version))
                 {
                     var queryResponse = await Client.GetCertificateAsync(name, cancellationToken).ConfigureAwait(false);
-                                      
-                    using (var raw = queryResponse.GetRawResponse())
-                    {
-                        response = new KeyVaultCertificateResponse(queryResponse.Value, raw.Status, watch.ElapsedMilliseconds);
-                    }
+
+                    using var raw = queryResponse.GetRawResponse();
+                    response = new KeyVaultCertificateResponse(queryResponse.Value, raw.Status, watch.ElapsedMilliseconds);
                 }
                 else
                 {
                     var queryResponse = await Client.GetCertificateVersionAsync(name, version, cancellationToken).ConfigureAwait(false);
 
-                    using (var raw = queryResponse.GetRawResponse())
-                    {
-                        response = new KeyVaultCertificateResponse(queryResponse.Value, raw.Status, watch.ElapsedMilliseconds);
-                    }
+                    using var raw = queryResponse.GetRawResponse();
+                    response = new KeyVaultCertificateResponse(queryResponse.Value, raw.Status, watch.ElapsedMilliseconds);
                 }
 
                 watch.Stop();
